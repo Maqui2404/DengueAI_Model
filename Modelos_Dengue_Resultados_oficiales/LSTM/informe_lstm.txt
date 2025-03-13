@@ -1,0 +1,24 @@
+🔹 Modelo LSTM
+
+📊 Métricas de rendimiento
+MAE: 417.8000
+RMSE: 771.0208
+R²: 0.9232
+
+🏗️ Arquitectura del modelo
+- Capa LSTM (50 unidades, activation='relu', return_sequences=True)
+- Capa LSTM (50 unidades, activation='relu')
+- Capa Dense (25 unidades, activation='relu')
+- Capa Dense (1 unidad, salida)
+
+⚙️ Parámetros de entrenamiento
+- epochs: 50
+- batch_size: 16
+- optimizer: adam
+- loss: mse
+- train_test_split: 80%/20%
+- secuencia_pasos: 5
+
+🔧 Cómo usar el modelo
+1. Cargar con `tf.keras.models.load_model('modelo_lstm.keras')`
+2. Transformar los datos con `scaler.transform()` antes de predecir

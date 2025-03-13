@@ -1,0 +1,21 @@
+🔹 Modelo PROPHET
+
+📊 Métricas de rendimiento
+MAE: 427.3301
+RMSE: 794.4087
+R²: 0.7053
+
+🏗️ Arquitectura del modelo
+- Modelo Prophet con estacionalidad anual, semanal
+- Estacionalidad personalizada mensual (periodo=30.5, fourier_order=10)
+- Estacionalidad personalizada trimestral (periodo=91.25, fourier_order=15)
+- Modo de estacionalidad: multiplicativo
+- Escala previa de puntos de cambio: 0.05
+
+⚙️ Parámetros de entrenamiento
+- datos_entrenamiento: 1248 registros
+- periodos_prediccion: 52
+
+🔧 Cómo usar el modelo
+1. Cargar el modelo con `pickle.load(open('modelo_prophet.pkl', 'rb'))`
+2. Usar `modelo.predict(futuro)` para generar predicciones

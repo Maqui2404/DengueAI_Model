@@ -1,0 +1,20 @@
+🔹 Modelo ARIMA
+
+📊 Métricas de rendimiento
+MAE: 88.6992
+RMSE: 250.4737
+R²: 0.9707
+
+🏗️ Arquitectura del modelo
+- Modelo ARIMA con parámetros (5, 1, 2)
+- p=5: Componente autorregresiva
+- d=1: Diferenciación para estacionariedad
+- q=2: Componente de media móvil
+
+⚙️ Parámetros de entrenamiento
+- datos_entrenamiento: 1248 registros
+- orden: (5, 1, 2)
+
+🔧 Cómo usar el modelo
+1. Cargar el modelo con `pickle.load(open('modelo_arima.pkl', 'rb'))`
+2. Usar `modelo.predict(start, end, typ='levels')` para predicciones
